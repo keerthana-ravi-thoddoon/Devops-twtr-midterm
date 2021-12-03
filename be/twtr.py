@@ -31,7 +31,7 @@ from flask import g
 import jwt
 g = dict()
 
-# mongo
+
 #mongo_client = MongoClient('mongodb://localhost:27017/')
 mongo_client = MongoClient("mongodb+srv://admin:admin@cluster0.zkfcs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
