@@ -59,13 +59,13 @@ def set_env_var():
     if 'refresh_token_expiration' not in g:
         g['refresh_token_expiration'] = os.environ.get("REFRESH_TOKEN_EXPIRATION", 2592000)
     if 'users' not in g:
-        users = os.environ.get("USERS", 'Elon Musk,Bill Gates,Jeff Bezos')
+        users = os.environ.get("USERS", 'Elon Musk,Bill Gates,Jeff Bezos','admin')
         print('users=', users)
         print('g.users=', list(users.split(',')))
         g['users'] = list(users.split(','))
         print('g.users=', g['users'])
     if 'passwords' not in g:
-        passwords = os.environ.get("PASSWORDS", 'Tesla,Clippy,Blue Horizon')
+        passwords = os.environ.get("PASSWORDS", 'Tesla,Clippy,Blue Horizon','admin')
         g['passwords'] = list(passwords.split(','))
         print("g['passwords']=", g['passwords'])
         # Once hashed, the value is irreversible. However in the case of 
